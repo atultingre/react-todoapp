@@ -1,70 +1,129 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background: #333;
-    color: whitesmoke;
-  }
-  
-  body {
-    min-height: 100vh;
-    font-size: 1.5rem;
-    padding: 0 10% 10%;
-  }
-  
-  input,
-  textarea,
-  button,
-  select {
-    font: inherit;
-    margin-bottom: 1em;
-  }
-  
-  main {
-    max-width: 500px;
-    margin: auto;
-  }
-  
-  section {
-    margin-top: 1em;
-  }
-  
-  article {
-    margin: 0.5em 0.5em 0.5em 0;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
-    padding: 1em;
-  }
-  
-  h1 {
-    font-size: 3.5rem;
-  }
-  
-  p {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
-    font-size: 1.2rem;
-    margin: 0.5em 0;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .postCredit {
-    font-size: 1rem;
-  }
-  
-  .reactionButton {
-    margin: 0 0.25em 0 0;
-    background: transparent;
-    border: none;
-    color: whitesmoke;
-    font-size: 1rem;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+}
+
+input[type="text"],
+button {
+  font: inherit;
+}
+
+main {
+
+  margin: auto;
+  max-width: 600px;
+}
+
+article {
+  background-color: #81b0d4;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0.5rem;
+  background-color: mediumvioletred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid hsl(0, 0%, 58%);
+}
+
+.todo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  min-width: 30px;
+  min-height: 30px;
+  margin-right: 1rem;
+}
+
+button {
+  min-width: 50px;
+  min-height: 50px;
+  border: 1px solid #333;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.trash {
+  background-color: #fff;
+  color: mediumvioletred;
+}
+
+.trash:focus,
+.trash:hover {
+  filter: brightness(120%)
+}
+
+form {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #333;
+  margin-bottom: 1rem;
+  /* background-color: #f63f2d; */
+}
+
+form label {
+  position: absolute;
+  left: -10000px;
+}
+
+.new-todo {
+  width: 100%;
+  padding-right: 30px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 0.5px solid #333;
+}
+
+.submit {
+  background-color: gray;
+  color: #fff;
+}
+
+.submit:focus,
+.submit:hover {
+  background-color: rgb(49, 43, 43);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+}
+
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d1e6ff;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#642bff, #ff22e6);
+  border-radius: 10px;
+  height: 50px;
+}
